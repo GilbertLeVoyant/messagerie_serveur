@@ -23,13 +23,16 @@ public class ClientSimple extends JFrame
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(new BorderLayout());
 
+
 		messagePane = new JTextPane();
 		messagePane.setEditable(false);
 		add(new JScrollPane(messagePane), BorderLayout.CENTER);
 
+
 		JPanel inputPanel = new JPanel(new BorderLayout());
 		inputField = new JTextField();
 		inputPanel.add(inputField, BorderLayout.CENTER);
+
 
 		JButton sendButton = new JButton("Envoyer");
 		sendButton.addActionListener(new ActionListener()
@@ -44,6 +47,7 @@ public class ClientSimple extends JFrame
 				}
 			}
 		});
+		
 		inputPanel.add(sendButton, BorderLayout.EAST);
 		add(inputPanel, BorderLayout.SOUTH);
 
